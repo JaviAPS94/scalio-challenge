@@ -1,0 +1,27 @@
+{
+  "coveragePathIgnorePatterns": [
+    "(.dto)\\.(ts|tsx|js)$",
+    "(.interceptor)\\.(ts|tsx|js)$",
+    "(.middleware)\\.(ts|tsx|js)$",
+    "(.check)\\.(ts|tsx|js)$",
+    "(logger.service)\\.(ts|tsx|js)$"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testRegex": ".unit-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coverageDirectory": "../coverage",
+  "testEnvironment": "node",
+  "moduleNameMapper": {
+    "@application(.*)$": "<rootDir>/src/application$1",
+    "@domain(.*)$": "<rootDir>/src/domain$1",
+    "@infrastructure(.*)$": "<rootDir>/src/infrastructure$1",
+    "@constants(.*)$": "<rootDir>/src/constants$1"
+  }
+}
