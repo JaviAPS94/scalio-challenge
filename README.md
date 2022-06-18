@@ -68,12 +68,20 @@ OpenAPI |The OpenAPI specification is a language-agnostic definition format used
 - This project has frontend project. You can access in this link: https://github.com/JaviAPS94/scalio-challenge-frontend
 - Run the frontend with the guidelines given in the Readme.
 
+### TODO list
+
+- [x] After the app is launched, the Home screen is displayed
+- [x] The user enters a random Integer value into to the 'Id' field and taps the `Send` button
+- [x] The app sends a https request to http://localhost:3000/posts/{id} , where {id} is the integer value entered by the user.
+  NOTE: The complete Posts Data can be found at the bottom of this evaluation and should be accessible from the http://localhost:3000/posts/ endpoint
+- [x] The app then parses the response from the server. If both the 'title' and 'body' fields exists, the Details screen should open and display the corresponding values. If either of the fields are null/empty/absent, an error message should be displayed on the Home screen.
+
 ## Getting Started
 
 1. Clone the backend repository
 
 ```
-git clone git@github.com:ecaminero/nestjs-ddd.git
+git clone git@github.com:JaviAPS94/scalio-challenge.git
 ```
 
 2. In root directory run
@@ -117,13 +125,17 @@ $ npm run test:cov
 
 ### Notes
 
-#### Main route
+This app was deployed on Glitch and you can use in local
 
-{{host}}/api/zemoga-challenge
+#### Host
+
+- URL Glitch: https://shore-bronze-lip.glitch.me
+- URL local: localhost:4000
 
 #### OpenAPI route
 
-{{host}}/api/zemoga-challenge/swagger-ui.html
+- URL Glitch: https://shore-bronze-lip.glitch.me/api
+- URL local: localhost:4000/api
 
 ### License
 
