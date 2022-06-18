@@ -1,17 +1,22 @@
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
-// tslint:disable-next-line: max-classes-per-file
+import { ApiProperty } from '@nestjs/swagger';
+
 export class Post {
+  @ApiProperty()
   @IsNumber()
   @IsNotEmpty()
   userId: number;
 
+  @ApiProperty()
   @IsNumber()
   @IsNotEmpty()
   id: number;
 
+  @ApiProperty()
   @IsString()
   title: string;
 
+  @ApiProperty()
   @IsString()
   body: string;
 }

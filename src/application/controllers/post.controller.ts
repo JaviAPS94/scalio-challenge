@@ -8,6 +8,11 @@ import {
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
+import {
+  ApiOkResponse,
+  ApiBadRequestResponse,
+  ApiNotFoundResponse,
+} from '@nestjs/swagger';
 import { PostService } from '@domain/services/post.service';
 import { FindPostDto } from '@application/dto/find-post.dto';
 import { Post } from '@domain/entities/Post';
@@ -20,6 +25,16 @@ export class PostController {
   constructor(private readonly postService: PostService) {}
 
   @Get(':id')
+  @ApiOkResponse({
+    description: 'Get post by id ok.',
+    type: Post,
+  })
+  @ApiBadRequestResponse({
+    description: 'Get post by id bad request because id is not a number',
+  })
+  @ApiNotFoundResponse({
+    description: 'Get post by id not found',
+  })
   async getById(@Param() params: FindPostDto): Promise<Post> {
     const context: Context = { module: 'PostController', method: 'getById' };
     this.Log.logger('Get post by id', context);
@@ -40,6 +55,10 @@ export class PostController {
   }
 
   @Get()
+  @ApiOkResponse({
+    description: 'Get all posts ok.',
+    type: [Post],
+  })
   async getAll(): Promise<Post[]> {
     const context: Context = { module: 'PostController', method: 'getAll' };
     this.Log.logger('Get all posts', context);

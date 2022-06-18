@@ -4,7 +4,8 @@
     "(.interceptor)\\.(ts|tsx|js)$",
     "(.middleware)\\.(ts|tsx|js)$",
     "(.check)\\.(ts|tsx|js)$",
-    "(logger.service)\\.(ts|tsx|js)$"
+    "(logger.service)\\.(ts|tsx|js)$",
+    "(health.controller)\\.(ts|tsx|js)$"
   ],
   "moduleFileExtensions": [
     "js",
