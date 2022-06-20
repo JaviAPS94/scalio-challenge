@@ -1,5 +1,9 @@
 # SCALIO BACKEND CHALLENGE
 
+## IMPORTANT
+
+The first request to the server takes a while, since the application deployed in Glitch is sleeping until there are requests (due to the use of a free account)
+
 ## Description
 
 The goal is to create a simple web application which makes a request to an API, parses the response, and displays the result in the UI.   
